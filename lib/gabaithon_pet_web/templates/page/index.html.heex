@@ -1,7 +1,104 @@
-<section class="phx-hero">
-  <h1><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h1>
-  <p>Peace of mind from prototype to production</p>
-</section>
+<!-- 全体 -->
+<div class="mx-10 w-full">
+  <!--部屋表示部分-->
+  <div class="my-5">
+    <div class="card w-full bg-base-100 bg-neutral shadow-xl">
+      <div class="card-body">
+        <h2 class="card-title"><%= gettext "%{pet_name}のお部屋", pet_name: "Phoenix" %></h2>
+        <p>example</p>
+      </div>
+      <figure><img src={Routes.static_path(@conn, "/images/kuchipacchi.jpg")}></figure>
+    </div>
+  </div>
+
+
+  <div class="card w-full bg-base-100 shadow-2xl">
+    <div class="card-body">
+      <div class="card-actions">
+        <div class="w-full h-fit flex flex-row justify-evenly space-x-5">
+          <div class="">
+            <button class="btn btn-lg btn-secondary">遊ぶ</button>
+          </div>
+          <div class="">
+            <button class="btn btn-lg btn-primary">ご飯をあげる</button>
+          </div>
+          <div class="">
+            <button class="btn btn-lg btn-accent">掃除をする</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--コマンド部分-->
+
+  <div class="w-full h-fit my-5 flex flex-row space-x-5">
+    <div class="card w-1/2 bg-primary text-primary-content shadow-2xl">
+      <div class="card-body">
+        <h2 class="card-title">今日のお世話</h2>
+        <h3>- 朝 -</h3>
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content">朝ごはん</span>
+          </label>
+        </div>
+
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content">掃除をする</span>
+          </label>
+        </div>
+
+        <h3>- 夜 -</h3>
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content">夜ごはん</span>
+          </label>
+        </div>
+
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content">遊ぶ</span>
+          </label>
+        </div>
+
+        <div class="form-control">
+          <label class="cursor-pointer label">
+            <input type="checkbox" checked="checked" class="checkbox checkbox-success" />
+            <span class="label-text text-primary-content">掃除をする</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-1/2 flex flex-col space-y-5">
+      <div class="card bg-accent text-primary-content shadow-2xl">
+        <div class="card-body">
+          <h2 class="card-title">お金管理</h2>
+          <p><%= gettext "%{pet_name}の生活にかかるお金を管理します．", pet_name: "Phoenix" %></p>
+          <div class="card-actions justify-end">
+            <button class="btn btn-primary">More</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-secondary text-primary-content shadow-2xl">
+        <div class="card-body">
+          <h2 class="card-title">カレンダー</h2>
+          <p></p>
+          <div class="card-actions justify-end">
+            <button class="btn">More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <section class="row">
   <article class="column">
@@ -18,27 +115,8 @@
       </li>
     </ul>
   </article>
-  <article class="column">
-    <h2>Help</h2>
-    <ul>
-      <li>
-        <a href="https://elixirforum.com/c/phoenix-forum">Forum</a>
-      </li>
-      <li>
-        <a href="https://web.libera.chat/#elixir">#elixir on Libera Chat (IRC)</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">Twitter @elixirphoenix</a>
-      </li>
-      <li>
-        <a href="https://elixir-slackin.herokuapp.com/">Elixir on Slack</a>
-      </li>
-      <li>
-        <a href="https://discord.gg/elixir">Elixir on Discord</a>
-      </li>
-    </ul>
-  </article>
 </section>
+
 <div class="container w-full">
   <div class="flex justify-center">
     <div class="badge mx-3">neutral</div>
@@ -55,4 +133,6 @@
     </select>
   </div>
   </div>
+
+  <script src="/Users/shu_0/projekt/sample/sample_gabaithon_pet/assets/js/main.js"></script>
 </div>
