@@ -18,6 +18,7 @@ defmodule GabaithonPetWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/money", MoneyController, :index
   end
 
   # Other scopes may use custom stacks.
