@@ -20,6 +20,7 @@ defmodule GabaithonPetWeb.Router do
     get "/", PageController, :index
     get "/money", MoneyController, :index
     get "/calender", CalenderController, :index
+    get "/setting", SettingController, :index
   end
 
   # Other scopes may use custom stacks.
